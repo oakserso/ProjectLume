@@ -130,6 +130,7 @@ d.speak(); // Rex barks
 - No third-party dependencies required
 
 ### Compilation and Execution
+After either cloning the repo using ```git clone https://github.com/oakserso/ProjectLume.git``` or downloading and extracting the folder:
 
 #### Run in REPL Mode (Interactive Prompt):
 ```java Lume.java```
