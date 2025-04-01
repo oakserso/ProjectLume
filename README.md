@@ -174,4 +174,11 @@ This interpreter was built with **production-quality design principles** in mind
   - Better error tracing and debugging support
   - Bytecode compilation or a VM-based backend
 
+## Contact
 
+For any inquiries or suggestions, feel free to reach out:
+
+- Email: akiradev02@icloud.com
+- LinkedIn: https://www.linkedin.com/in/odai-alqahwaji-2bbb50304
+#
+Project Link: [ProjectLume](https://github.com/oakserso/ProjectLume)
