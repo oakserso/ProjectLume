@@ -2,7 +2,7 @@
 
 **Lume** is a fully-featured, dynamically-typed scripting language interpreter implemented in **pure Java**, designed to support a wide range of language features including **classes, inheritance, closures, lexical scoping, native functions, and postfix expression evaluation**.
 
-This project demonstrates deep understanding of **language design**, **compiler theory**, and **runtime system architecture**, all built without external dependencies — just clean, extensible, production-quality Java.
+This project demonstrates deep understanding of **language design**, **compiler theory**, and **runtime system architecture**, all built without external dependencies — just clean, extensible, production-quality Java. Inspired by Robert Nystorm's 600-page book, Crafting Interpreters. 
 
 ---
 
