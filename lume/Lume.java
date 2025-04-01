@@ -12,11 +12,16 @@ public class Lume {
     private static final Interpreter interpreter = new Interpreter();
     static boolean hadError = false;
     static boolean hadRuntimeError = false;
+    
     public static void main(String[] args) throws IOException {
         if (args.length > 1) {
-            System.out.println("Usage: jlox [usage]");
+            System.out.println("Usage: lume [script.lume]");
             System.exit(64);
         } else if (args.length == 1) {
+            if (!args[0].endsWith(".lume")) {
+                System.err.println("Error: Lume interpreter only accepts .lume files");
+                System.exit(64);
+            }
             runFile(args[0]);
         } else {
             runPrompt();
@@ -24,6 +29,12 @@ public class Lume {
     }
 
     private static void runFile(String path) throws IOException {
+        // Double-check the extension (in case method is called directly)
+        if (!path.endsWith(".lume")) {
+            System.err.println("Error: Only .lume files are supported");
+            System.exit(64);
+        }
+
         byte[] bytes = Files.readAllBytes(Paths.get(path));
         run(new String(bytes, Charset.defaultCharset()));
 
@@ -35,12 +46,12 @@ public class Lume {
         InputStreamReader input = new InputStreamReader(System.in);
         BufferedReader reader = new BufferedReader(input);
 
+        System.out.println("Lume REPL (type 'exit' to quit)");
         for (;;) {
             System.out.print("> ");
             String line = reader.readLine();
-            if (line.equals("exit")) break;
+            if (line == null || line.equals("exit")) break;
             run(line);
-
             hadError = false;
         }
     }
